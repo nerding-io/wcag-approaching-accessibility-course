@@ -1,0 +1,340 @@
+#examples {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  /* sticky header */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#examples .header-title-logo a {
+  display: flex;
+  align-items: center;
+  width: 50px;
+  margin-bottom: 20px;
+}
+#examples .header-title-logo img {
+  border-radius: 50%;
+  margin-right: 10px;
+  max-width: 50px;
+  padding: 20px 10px;
+  background-color: #fcdc01;
+}
+
+#examples nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#examples nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#examples nav a:hover,
+#examples nav a:focus {
+  text-decoration: underline;
+}
+
+/* Example 1 */
+#example-1 button:focus {
+  outline: 2px solid blue;
+}
+
+/* Example 2 */
+#example-2 a:hover {
+  color: red;
+}
+
+/* Example 3 */
+body {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Example 4 */
+#example-4 nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Example 4 */
+#example-4 nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #333;
+}
+
+/* Example 4 */
+#example-4 nav a:hover,
+#example-4 nav a:focus {
+  background-color: #555;
+}
+
+/* Example 5 */
+#example-5 nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+#example-5 nav a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #333;
+}
+
+#example-5 nav a:hover,
+#example-5 nav a:focus {
+  background-color: #555;
+}
+
+main section {
+  margin-top: 50px;
+}
+
+main h2 {
+  margin-top: 0;
+}
+
+/* Example 6 */
+marquee[behavior] {
+  -webkit-animation: none;
+  -moz-animation: none;
+  -ms-animation: none;
+  animation: none;
+}
+
+/* Example 6 */
+#example-6 button {
+  margin-bottom: 20px;
+}
+
+/* Example 7 */
+#example-7 label {
+  display: block;
+}
+
+#example-7 input {
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Example 8 */
+#example-8 label {
+  display: block;
+}
+
+#example-8 input {
+  margin-bottom: 10px;
+}
+
+#example-8 .form-message {
+  margin-top: 10px;
+}
+
+/* Example 9 */
+#example-9 .skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+
+#example-9 .skip-link:focus {
+  top: 0;
+}
+
+/* Example 9 */
+#example-9 header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+#example-9 header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#example-9 header nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#example-9 header nav a:hover,
+#example-9 header nav a:focus {
+  text-decoration: underline;
+}
+
+#example-9 main {
+  padding: 20px;
+}
+
+/* Example 10 */
+#example-10 audio,
+#example-10 video {
+  display: block;
+  width: 100%;
+}
+
+/* Example 11 */
+#example-11 button {
+  padding: 10px;
+}
+
+/* Example 12 */
+#example-12 a {
+  color: blue;
+  text-decoration: underline;
+}
+
+#example-12 a:focus {
+  outline: 2px solid blue;
+}
+
+/* Example 13 */
+#example-13 p {
+  color: #333;
+  font-size: 16px;
+}
+
+/* Example 14 */
+#example-14 .skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+
+#example-14 .skip-link:focus {
+  top: 0;
+}
+
+#example-14 nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#example-14 nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#example-14 nav a:hover,
+#example-14 nav a:focus {
+  text-decoration: underline;
+}
+
+#example-14 main {
+  padding: 20px;
+}
+
+/* Example 15 */
+#example-15 object {
+  width: 100%;
+  height: 500px;
+}
+
+/* Example 16 */
+#example-16 button {
+  padding: 10px;
+}
+
+/* Example 17 */
+#example-17 main {
+  display: block;
+}
+
+#example-17 nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+#example-17 nav ul {
+  list-style: none;
+  margin: 0;
+}
+
+#example-17 nav a {
+  color: white;
+  text-decoration: none;
+}
+
+#example-17 nav a:hover,
+#example-17 nav a:focus {
+  text-decoration: underline;
+}
+
+/* Example 18 */
+#example-18 kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 #ccc;
+  padding: 2px 4px;
+}
+
+/* Example 19 */
+#example-19 nav ol {
+  list-style: none;
+  margin: 0;
+}
+
+#example-19 nav a {
+  color: blue;
+  text-decoration: none;
+}
+
+#example-19 nav a:hover,
+#example-19 nav a:focus {
+  text-decoration: underline;
+}
+
+#example-19 main section {
+  margin-top: 50px;
+}
+
+/* Example 20 */
+#example-20 nav ol {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#example-20 nav a {
+  color: blue;
+  text-decoration: none;
+}
+
+#example-20 nav a:hover,
+#example-20 nav a:focus {
+  text-decoration: underline;
+}
+
+#example-20 nav li:not(:last-child)::after {
+  content: '>';
+  margin-left: 10px;
+  margin-right: 10px;
+  color: #ccc;
+}

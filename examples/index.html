@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WCAG Compliance Examples</title>
+    <link rel="stylesheet" href="examples.css" />
+  </head>
+  <body>
+    <header id="examples">
+      <div class="header-title-logo">
+        <a href="https://nerding.io" target="_blank">
+          <img
+            src="https://payhip.com/cdn-cgi/image/format=auto,width=1500/https://pe56d.s3.amazonaws.com/o_1gosnbonr6kt1q2f1jlo109vqo71g.png"
+          />
+        </a>
+      </div>
+      <h1>WCAG Compliance</h1>
+      <nav>
+        <ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/examples/attrs.html">Attributes</a></li>
+          <li><a href="/examples/">/</a></li>
+        </ul>
+      </nav>
+      <h2>Examples</h2>
+      <nav>
+        <ul>
+          <li><a href="/">/</a></li>
+          <li><a href="/">Attributes</a></li>
+          <li><a href="/">/</a></li>
+
+          <li><a href="#example-1">1</a></li>
+          <li><a href="#example-2">2</a></li>
+          <li><a href="#example-3">3</a></li>
+          <li><a href="#example-4">4</a></li>
+          <li><a href="#example-5">5</a></li>
+          <li><a href="#example-6">6</a></li>
+          <li><a href="#example-7">7</a></li>
+          <li><a href="#example-8">8</a></li>
+          <li><a href="#example-9">9</a></li>
+          <li><a href="#example-10">10</a></li>
+          <li><a href="#example-11">11</a></li>
+          <li><a href="#example-12">12</a></li>
+          <li><a href="#example-13">13</a></li>
+          <li><a href="#example-14">14</a></li>
+          <li><a href="#example-15">15</a></li>
+          <li><a href="#example-16">16</a></li>
+          <li><a href="#example-17">17</a></li>
+          <li><a href="#example-18">18</a></li>
+          <li><a href="#example-19">19</a></li>
+          <li><a href="#example-20">20</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="example-1">
+        <h2>Example 1: Using alt text for images</h2>
+        <img src="example.jpg" alt="Example image" />
+      </section>
+      <section id="example-2">
+        <h2>Example 2: Providing clear and concise form labels</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+      <section id="example-3">
+        <h2>Example 3: Using descriptive and meaningful headings</h2>
+        <h1>About Us</h1>
+        <h2>Our Mission</h2>
+        <p>Our mission is to...</p>
+        <h2>Our Team</h2>
+        <p>Meet the people who make it all happen.</p>
+      </section>
+      <section id="example-4">
+        <h2>Example 4: Using accessible and semantic HTML</h2>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/products">Our Products</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </section>
+      <section id="example-5">
+        <h2>
+          Example 5: Providing a way to navigate using landmarks and headings
+        </h2>
+        <nav aria-label="Main Navigation">
+          <ul>
+            <li><a href="#section-1">Section 1</a></li>
+            <li><a href="#section-2">Section 2</a></li>
+            <li><a href="#section-3">Section 3</a></li>
+          </ul>
+        </nav>
+        <main>
+          <section id="section-1">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </section>
+          <section id="section-2">
+            <h2>Section 2</h2>
+            <p>Nullam vel ipsum at ante malesuada blandit.</p>
+          </section>
+          <section id="section-3">
+            <h2>Section 3</h2>
+            <p>
+              Sed euismod risus sit amet nisi malesuada, in commodo nunc
+              dapibus.
+            </p>
+          </section>
+        </main>
+      </section>
+      <section id="example-6">
+        <h2>
+          Example 6: Providing a way to pause or stop auto-updating content
+        </h2>
+        <div aria-hidden="true">
+          <marquee>Scrolling text goes here</marquee>
+        </div>
+      </section>
+      <section id="example-7">
+        <h2>Example 7: Providing clear and concise error messages</h2>
+        <form id="formEmail">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <button type="submit">Submit</button>
+          <div class="error-message" aria-live="polite"></div>
+        </form>
+        <script>
+          const formEmail = document.querySelector("#formEmail");
+          const formMessage = document.querySelector(".error-message");
+          formEmail.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = formEmail.elements.email.value;
+            if (email.includes("@")) {
+              formMessage.textContent = "";
+              formEmail.reset();
+            } else {
+              formMessage.textContent = "Please enter a valid email address.";
+            }
+          });
+        </script>
+      </section>
+      <section id="example-8">
+        <h2>
+          Example 8: Providing clear and concise instructions and feedback for
+          user actions
+        </h2>
+        <form id="user">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+          <button type="submit">Submit</button>
+          <div class="form-message" aria-live="polite"></div>
+        </form>
+        <script>
+          const form = document.querySelector("form");
+          const message = document.querySelector(".form-message");
+
+          form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = form.elements.username.value;
+            if (username) {
+              message.textContent = `Thank you for submitting, ${username}!`;
+              form.reset();
+            } else {
+              message.textContent = "Please enter your username.";
+            }
+          });
+        </script>
+      </section>
+      <section id="example-9">
+        <h2>Example 9: Providing a way to bypass repetitive content</h2>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <header>
+          <nav>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/products">Our Products</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+          </nav>
+        </header>
+        <main id="main-content">
+          <h1>Welcome to our website!</h1>
+          <p>We have lots of great content for you to explore.</p>
+        </main>
+      </section>
+      <section id="example-10">
+        <h2>Example 10: Providing a way to control audio and video content</h2>
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <video controls>
+          <source src="video.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </section>
+      <section id="example-11">
+        <h2>
+          Example 11: Ensuring that all interactive elements are accessible via
+          keyboard navigation
+        </h2>
+        <button onclick="alert('Hello world!')">Click me</button>
+      </section>
+      <section id="example-12">
+        <h2>Example 12: Providing clear and concise link text</h2>
+        <p>For more information, <a href="/about">click here</a>.</p>
+        <p>
+          For more information,
+          <a href="/about" aria-label="Learn more about us">click here</a>.
+        </p>
+      </section>
+      <section id="example-13">
+        <h2>Example 13: Using clear and easy-to-read text</h2>
+        <p>Contrast ratio of text must be at least 4.5:1</p>
+        <p>The quick brown fox jumps over the lazy dog.</p>
+      </section>
+      <section id="example-14">
+        <h2>Example 14: Providing a way to navigate using skip links</h2>
+        <nav aria-label="Main Navigation">
+          <ul>
+            <li><a href="#section-1">Section 1</a></li>
+            <li><a href="#section-2">Section 2</a></li>
+            <li><a href="#section-3">Section 3</a></li>
+          </ul>
+        </nav>
+        <main>
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+          <section id="section-1">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </section>
+          <section id="section-2">
+            <h2>Section 2</h2>
+            <p>Nullam vel ipsum at ante malesuada blandit.</p>
+          </section>
+          <section id="section-3">
+            <h2>Section 3</h2>
+            <p>
+              Sed euismod risus sit amet nisi malesuada, in commodo nunc
+              dapibus.
+            </p>
+          </section>
+        </main>
+      </section>
+      <section id="example-15">
+        <h2>Example 15: Providing alternative content for non-text content</h2>
+        <object data="example.pdf" type="application/pdf">
+          <img src="example.png" alt="Example image of PDF content" />
+        </object>
+      </section>
+      <section id="example-16">
+        <h2>
+          Example 16: Providing a way to resize text without assistive
+          technology
+        </h2>
+        <p><button onclick="decreaseTextSize()">Decrease text size</button></p>
+        <p>This is some text that can be resized.</p>
+        <p><button onclick="increaseTextSize()">Increase text size</button></p>
+        <!-- <script>
+          const text = document.querySelector("p:last-of-type");
+          function decreaseTextSize() {
+            const currentSize = window.getComputedStyle(text).fontSize;
+            const newSize = parseInt(currentSize) - 2 + "px";
+            text.style.fontSize = newSize;
+          }
+
+          function increaseTextSize() {
+            const currentSize = window.getComputedStyle(text).fontSize;
+            const newSize = parseInt(currentSize) + 2 + "px";
+            text.style.fontSize = newSize;
+          }
+        </script> -->
+      </section>
+      <section id="example-17">
+        <h2>Example 17: Providing a way to navigate using ARIA landmarks</h2>
+        <nav role="navigation" aria-label="Main Navigation">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/products">Our Products</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+          </ul>
+        </nav>
+        <main role="main">
+          <h1>Welcome to our website!</h1>
+          <p>We have lots of great content for you to explore.</p>
+        </main>
+      </section>
+      <section id="example-18">
+        <h2>
+          Example 18: Providing a way to navigate using keyboard shortcuts
+        </h2>
+        <p>Press <kbd>Alt</kbd> + <kbd>1</kbd> to go to the home page.</p>
+        <p>Press <kbd>Alt</kbd> + <kbd>2</kbd> to go to the about us page.</p>
+        <p>Press <kbd>Alt</kbd> + <kbd>3</kbd> to go to the products page.</p>
+        <p>Press <kbd>Alt</kbd> + <kbd>4</kbd> to go to the contact us page.</p>
+      </section>
+      <section id="example-19">
+        <h2>
+          Example 19: Providing a way to navigate using a table of contents
+        </h2>
+        <nav>
+          <h2>Table of Contents</h2>
+          <ol>
+            <li><a href="#section-1">Section 1</a></li>
+            <li><a href="#section-2">Section 2</a></li>
+            <li><a href="#section-3">Section 3</a></li>
+          </ol>
+        </nav>
+        <main>
+          <section id="section-1">
+            <h2>Section 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </section>
+          <section id="section-2">
+            <h2>Section 2</h2>
+            <p>Nullam vel ipsum at ante malesuada blandit.</p>
+          </section>
+          <section id="section-3">
+            <h2>Section 3</h2>
+            <p>
+              Sed euismod risus sit amet nisi malesuada, in commodo nunc
+              dapibus.
+            </p>
+          </section>
+        </main>
+      </section>
+      <section id="example-20">
+        <h2>
+          Example 20: Providing a way to navigate using a breadcrumb trail
+        </h2>
+        <nav aria-label="Breadcrumb Trail">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/about/team">Our Team</a></li>
+            <li>Current Page</li>
+          </ol>
+        </nav>
+        <main>
+          <h1>Welcome to our website!</h1>
+          <p>We have lots of great content for you to explore.</p>
+        </main>
+      </section>
+      <section id="comming-soon">
+        <h2>More examples coming soon!</h2>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li>What would you like to learn?</li>
+        </ol>
+      </section>
+    </main>
+  </body>
+  <script src="examples.js" defer></script>
+</html>

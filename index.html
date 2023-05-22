@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Accessible Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>My Accessible Website</h1>
+      <nav>
+        <ul>
+          <li><a href="#content" class="skip-link">Skip to Content</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="content">
+      <h2>Welcome to My Website!</h2>
+      <p lang="en">
+        This website aims to provide inclusive and accessible content to all
+        users.
+      </p>
+
+      <article>
+        <h3>Article Heading</h3>
+        <p>This is the content of the article.</p>
+      </article>
+
+      <section>
+        <h3>Section Heading</h3>
+        <p>This is the content of the section.</p>
+      </section>
+
+      <aside>
+        <h3>Aside Heading</h3>
+        <p>This is the content of the aside.</p>
+      </aside>
+
+      <img src="image.jpg" alt="A person using a wheelchair in a park" />
+
+      <video controls>
+        <source src="video.mp4" type="video/mp4" />
+        <track
+          kind="sign"
+          src="signlanguage.vtt"
+          srclang="en"
+          label="Sign Language"
+        />
+        <track
+          kind="description"
+          src="descriptions.vtt"
+          srclang="en"
+          label="Audio Descriptions"
+        />
+      </video>
+
+      <figure>
+        <img src="compleximage.jpg" alt="Description of the complex image" />
+
+        <figcaption>Detailed description of the complex image</figcaption>
+      </figure>
+      <table>
+        <caption>
+          Monthly Sales Report
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Revenue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product A</td>
+            <td>100</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td>Product B</td>
+            <td>75</td>
+            <td>$375</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <button onclick="handleClick()" onkeydown="handleKeydown(event)">
+          Submit
+        </button>
+      </form>
+    </main>
+  </body>
+</html>
